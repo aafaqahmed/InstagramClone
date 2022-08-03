@@ -5,6 +5,7 @@ import Stories from "./Stories";
 
 const post = [
   {
+    id: "1",
     user: {
       imageUri:
         "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg",
@@ -17,6 +18,7 @@ const post = [
     postedAt: "7 minutes ago",
   },
   {
+    id: "2",
     user: {
       imageUri:
         "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png",
@@ -29,6 +31,7 @@ const post = [
     postedAt: "7 minutes ago",
   },
   {
+    id: "3",
     user: {
       imageUri:
         "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/graham.jpg",
@@ -47,7 +50,7 @@ const Feed = () => {
     <SafeAreaView>
       <FlatList
         data={post}
-        keyExtractor={(item, index) => item.user.name}
+        keyExtractor={({ id }) => id}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => <Post post={item} />}
         ListHeaderComponent={Stories}

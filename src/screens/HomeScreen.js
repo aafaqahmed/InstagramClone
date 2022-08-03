@@ -5,7 +5,7 @@ import Feed from "../components/Feed";
 const HomeScreen = () => {
   const statusBarHeight = StatusBar.currentHeight;
   return (
-    <SafeAreaView style={{ marginTop: statusBarHeight }}>
+    <SafeAreaView style={{}}>
       <Feed />
     </SafeAreaView>
   );
